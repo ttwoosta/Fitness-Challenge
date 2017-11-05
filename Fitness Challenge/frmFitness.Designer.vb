@@ -89,7 +89,6 @@ Partial Class frmFitness
         Me.lstWeightLoss.Font = New System.Drawing.Font("Tahoma", 14.0!, System.Drawing.FontStyle.Bold)
         Me.lstWeightLoss.FormattingEnabled = True
         Me.lstWeightLoss.ItemHeight = 23
-        Me.lstWeightLoss.Items.AddRange(New Object() {"46.3"})
         Me.lstWeightLoss.Location = New System.Drawing.Point(205, 136)
         Me.lstWeightLoss.Name = "lstWeightLoss"
         Me.lstWeightLoss.Size = New System.Drawing.Size(50, 188)
