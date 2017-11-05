@@ -79,7 +79,7 @@ Public Class frmFitness
         ' The loop terminates when the user has entered 8 weight loss values 
         ' or the users taps or clicks the Cancel button or Close button
         ' in the InputBox
-        Do Until intNumberOfEntries > cintMaxNumberOfEntries Or ipbResult = InputBoxResult.Cancelled
+        Do Until intNumberOfEntries >= cintMaxNumberOfEntries
 
             ' Display the inputBox if the number of entries entered less than 8
             strWeightLoss = InputBox(strInputMessage & intNumberOfEntries, cstrInputHeading, " ")
@@ -116,13 +116,17 @@ Public Class frmFitness
                     ' a non - numeric weight loss
                     strInputMessage = cstrNonNumericError
 
+                Case InputBoxResult.Cancelled
+                    Exit Do
+
             End Select
 
-            ' Calculate and displays the average team weight loss
-            If intNumberOfEntries = 0 Then
-                MsgBox("No weight loss value entered")
-            End If
         Loop
+
+        ' Calculate and displays the average team weight loss
+        If intNumberOfEntries = 0 Then
+            MsgBox("No weight loss value entered")
+        End If
 
         ' Disable the Weight Loss button
         btnWeightLoss.Enabled = False
