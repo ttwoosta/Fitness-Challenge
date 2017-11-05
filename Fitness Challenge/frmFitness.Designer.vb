@@ -63,6 +63,7 @@ Partial Class frmFitness
         '
         'lblTitle
         '
+        Me.lblTitle.BackColor = System.Drawing.Color.Transparent
         Me.lblTitle.Font = New System.Drawing.Font("Tahoma", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTitle.ForeColor = System.Drawing.Color.Goldenrod
         Me.lblTitle.Location = New System.Drawing.Point(90, 20)
@@ -70,7 +71,7 @@ Partial Class frmFitness
         Me.lblTitle.Size = New System.Drawing.Size(302, 72)
         Me.lblTitle.TabIndex = 1
         Me.lblTitle.Text = "Fitness Challenge Team Weight Loss"
-        Me.lblTitle.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'btnWeightLoss
         '
@@ -104,19 +105,24 @@ Partial Class frmFitness
         Me.lblAverageLoss.Size = New System.Drawing.Size(438, 23)
         Me.lblAverageLoss.TabIndex = 4
         Me.lblAverageLoss.Text = "Average weight loss of your team is XX.X lbs"
+        Me.lblAverageLoss.Visible = False
         '
         'frmFitness
         '
+        Me.AcceptButton = Me.btnWeightLoss
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImage = Global.Fitness_Challenge.My.Resources.Resources.Scale
         Me.ClientSize = New System.Drawing.Size(659, 436)
+        Me.Controls.Add(Me.mnuFitness)
         Me.Controls.Add(Me.lblAverageLoss)
         Me.Controls.Add(Me.lstWeightLoss)
         Me.Controls.Add(Me.btnWeightLoss)
         Me.Controls.Add(Me.lblTitle)
-        Me.Controls.Add(Me.mnuFitness)
         Me.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.MainMenuStrip = Me.mnuFitness
+        Me.MaximizeBox = False
         Me.Name = "frmFitness"
         Me.Text = "Fitness Challenge"
         Me.mnuFitness.ResumeLayout(False)
