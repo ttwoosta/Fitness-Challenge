@@ -82,7 +82,7 @@ Public Class frmFitness
         Do Until intNumberOfEntries >= cintMaxNumberOfEntries
 
             ' Display the inputBox if the number of entries entered less than 8
-            strWeightLoss = InputBox(strInputMessage & intNumberOfEntries, cstrInputHeading, " ")
+            strWeightLoss = InputBox(strInputMessage & intNumberOfEntries + 1, cstrInputHeading, " ")
 
             ' convert message to input result
             ipbResult = convertToInputBoxResultWith(strWeightLoss)
